@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="mystud" class="com.test.Student">
+	<property name="name" value="div"></property>
+	<property name="department" value="btech"></property>
+	<property name="address" ref="myadd"></property>
+	<property name="books" >
+	<list>
+	<value>Book1</value>
+	<value>Book2</value>
+	<value>Book3</value>
+	<value>Book4</value>
+	<value>Book5</value>
+	</list>
+	</property>
+	</bean>
+	
+	
+	<bean id="myadd" class="com.test.Address">
+		<property name="state" value="karnataka"></property>
+		<property name="city" value="bengaluru"></property>
+	</bean>
+	
+	
+	
+</beans>

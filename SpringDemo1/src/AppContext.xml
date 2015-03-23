@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="mystud" class="com.test.Student" p:name="shivani" p:department="btech" p:address-ref="myadd">
+</bean>
+	
+	
+	
+	<bean id="myadd" class="com.test.Address">
+		<property name="state" value="karnataka"></property>
+		<property name="city" value="bengaluru"></property>
+	</bean>
+	
+	<bean id="myemp" class="com.construct.Employee">
+		<constructor-arg value="ram" type="java.lang.String"
+			index="0">
+		</constructor-arg>
+		<constructor-arg value="btech" type="java.lang.String"
+			index="1">
+		</constructor-arg>
+	</bean>
+	
+	<bean id="myemp1" class="com.construct.Employee">
+		<constructor-arg value="div" type="java.lang.String"></constructor-arg>
+	</bean>
+	<bean id="myemp2" class="com.construct.Employee">
+		<constructor-arg value="Soumya" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="Mca" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="3462" type="int"></constructor-arg>
+	</bean>
+</beans>

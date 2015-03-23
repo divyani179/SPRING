@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="mybook" class="com.test.Book" scope="prototype">
+<property name="title" value="harry potter"></property>
+<property name="author" value="jkrowlings"></property>
+</bean>
+
+<bean id="custbean" class="com.lifecycle.CustBean" p:message="helloooo" init-method="init" destroy-method="customDestroy"></bean>
+</beans>

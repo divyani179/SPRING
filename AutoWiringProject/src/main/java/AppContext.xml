@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shape" class="com.test.Triangle" autowire-candidate="false">
+	</bean>
+	<bean id="rectangle" class="com.test.Rectangle">
+		
+			</bean>
+	<bean id="SF2" class="com.test.ShapeFactory" autowire="byName">
+		<!-- <property name="shape" ref="triangle"></property> -->
+	</bean>
+	<bean id="SF1" class="com.test.ShapeFactory" autowire="byType">
+	<!-- 	<property name="shape" ref="rectangle"></property> -->
+	</bean>
+</beans>

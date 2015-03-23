@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+<bean id="con2" class="com.test.Contact">
+<property name="phoneno" value="846"></property>
+<property name="phonetype" value="windows"></property>
+</bean>
+	
+	
+	
+	<bean id="mycus" class="com.test.Customer">
+<property name="name" value="divyani"></property>
+<property name="address" >
+<bean  class="com.test.Address">
+		<property name="state" value="karnataka"></property>
+		<property name="city" value="bengaluru"></property>
+	</bean>
+	</property>
+<property name="books">
+<list>
+<value>JAVA</value>
+<value>JSP</value>
+<value>Spring</value>
+<value>Hibernate</value>
+</list>
+</property>
+
+<property name="phonenos" >
+<list>
+
+<bean class="com.test.Contact">
+<property name="phoneno" value="23846"></property>
+<property name="phonetype" value="android"></property>
+</bean>
+<ref bean="con2"></ref>
+</list>
+</property>
+</bean>
+	
+</beans>
